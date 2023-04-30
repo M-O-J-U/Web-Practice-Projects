@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Quick Number Guessing Game (1/10)</label><br>
+    <label for="g">Guess the number : </label>
+    <input id="g"><br>
+    <input type="submit" id="submitB">
+    <Label id="end"></Label>
+    <script>
+        const rand=Math.round(Math.random()*10)
+        let guess=0;
+
+document.getElementById("submitB").onclick=function(){
+    guess=document.getElementById("g").value
+        if(guess==rand){
+            document.getElementById("end").innerHTML=(`${guess} is the right guess`)
+        }
+        else if(guess>rand){
+            document.getElementById("end").innerHTML=(`${guess} is larger`)
+        }
+        else{
+            document.getElementById("end").innerHTML=(`${guess} is smaller`)
+        }
+    }
+    </script>
+</body>
+</html>
