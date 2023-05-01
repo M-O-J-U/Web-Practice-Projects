@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Temperature Conversion from °C to °F and vice-versa</label><br><br>
+    <Label for="input">Enter Temperature </Label>
+    <input id="input"><br>
+    <label for="cRadio">Celsius </label>
+    <input type="radio" name="unit" id="cRadio"><br>
+    <label for="fRadio">Fehrenheit </label>
+    <input type="radio" name="unit" id="fRadio"><br><br>
+    <button id="submit">Convert</button>
+    <Label id="result"></Label>
+
+    <script>
+        let temp
+        document.getElementById("submit").onclick=function(){
+            temp=Number(temp)
+        if(document.getElementById("cRadio").checked){
+            temp=document.getElementById("input").value
+            temp=Celsius(temp)
+            document.getElementById("result").innerHTML=`${temp}°C`
+        }
+        else if(document.getElementById("fRadio").checked){
+            temp=document.getElementById("input").value
+            temp=Fehrenheit(temp)
+            document.getElementById("result").innerHTML=`${temp}°F`
+        }
+        else{
+            document.getElementById("result").innerHTML="Select a unit"
+        }
+    }
+        function Celsius(temp){
+            return (temp-32)*(5/9)
+        }
+        function Fehrenheit(temp){
+            return temp*9/5+32
+        }
+    </script>
+
+</body>
+</html>
