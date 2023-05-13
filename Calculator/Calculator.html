@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Calculator</label><br><br>
+
+    <input type="text" id="inp"><br>
+    <input type="button" id="7" class="b" value="7">
+    <input type="button" id="8" class="b" value="8">
+    <input type="button" id="9" class="b" value="9">
+    <input type="button" id="/" class="b" value="/"><br>
+    <input type="button" id="6" class="b" value="6">
+    <input type="button" id="5" class="b" value="5">
+    <input type="button" id="4" class="b" value="4">
+    <input type="button" id="*" class="b" value="*"><br>
+    <input type="button" id="3" class="b" value="3">
+    <input type="button" id="2" class="b" value="2">
+    <input type="button" id="1" class="b" value="1">
+    <input type="button" id="-" class="b" value="-"><br>
+    <input type="button" id="." class="b" value=".">
+    <input type="button" id="0" class="b" value="0">
+    <input type="button" id="=" class="b" value="=">
+    <input type="button" id="+" class="b" value="+"><br><br>
+
+    <script>
+        let result;
+        document.getElementById("1").onclick=function(){
+            document.getElementById("inp").value+="1"
+        }
+        document.getElementById("2").onclick=function(){
+            document.getElementById("inp").value+="2"
+        }
+        document.getElementById("3").onclick=function(){
+            document.getElementById("inp").value+="3"
+        }
+        document.getElementById("4").onclick=function(){
+            document.getElementById("inp").value+="4"
+               }
+        document.getElementById("5").onclick=function(){
+            document.getElementById("inp").value+="5"
+        }
+        document.getElementById("6").onclick=function(){
+            document.getElementById("inp").value+="6"
+        }
+        document.getElementById("7").onclick=function(){
+            document.getElementById("inp").value+="7"
+        }
+        document.getElementById("8").onclick=function(){
+            document.getElementById("inp").value+="8"
+        }
+        document.getElementById("9").onclick=function(){
+            document.getElementById("inp").value+="9"
+        }
+        document.getElementById("0").onclick=function(){
+            document.getElementById("inp").value+="0"
+        }
+        document.getElementById(".").onclick=function(){
+            document.getElementById("inp").value+="."
+        }        
+        document.getElementById("-").onclick=function(){
+            document.getElementById("inp").value+="-"
+        }        
+        document.getElementById("+").onclick=function(){
+            document.getElementById("inp").value+="+"
+        }        
+        document.getElementById("*").onclick=function(){
+            document.getElementById("inp").value+="*"
+        }        
+        document.getElementById("/").onclick=function(){
+            document.getElementById("inp").value+="/"
+        }        
+        
+        document.getElementById("=").onclick=function(){
+            result=eval(document.getElementById("inp").value)
+            document.getElementById("inp").value=result
+        }
+
+    </script>
+
+    <style>
+        .b{
+            padding: 15px;
+            border: 2px dotted;
+            margin: 15px;
+            border-radius: 2px;
+            align-content: center;
+            border-color: gray;
+            
+        }
+        .b:hover{
+            border: solid;
+            background-color: darkkhaki;
+        }
+        #inp{
+            margin: 15px;
+            padding: 15px;
+            font-size: 20px;
+        }
+    </style>
+
+</body>
+</html>
